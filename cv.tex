@@ -81,15 +81,10 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
 
 %for social icons
 \usepackage{fontawesome5}
@@ -129,7 +124,7 @@
 
 %Interests/ Keywords/ Summary
 \section{Summary}
-My name is Julien, I am a Computer Science Student by day, Mobile App Developer by night and never willing to do the same thing twice. This is why I am highly interested in process automations and abstraction of workflows. My current private project is a CLI to auto-generate mobile apps with features you already implemented once and will reuse in lots of projects (f.ex. authentication or a user datastructure and its UI components). My current academic ambition is to
+My name is Julien, I study Computer Science and hate doing the same thing twice. This is why I am highly interested in process automations and abstraction of workflows. Also, my current academic ambition is to
 get into the field of Quantum Crypthography. In my free time, I enjoy writing comedy scripts, playing baseball and I recently picked up playing the guitar.
 
 %Experience
@@ -137,20 +132,20 @@ get into the field of Quantum Crypthography. In my free time, I enjoy writing co
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{NEON Software Solutions GmbH, Berlin} & \hfill Jul 2021 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{I work at NEON as a Flutter Developer. Aside of implementing apps for clients, I dedicated myself to building up a fully automatic app development workflow to ensure product-wide quality, testability, scalability and save our developers a significant amount of time.}  \\
+\multicolumn{2}{@{}X@{}}{I work at NEON as a Flutter Developer. Aside of implementing apps for clients, I dedicate myself to building up a fully automatic app development workflow to ensure product-wide quality, testability, scalability and save our developers a significant amount of time.}  \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{TNG Technology Consulting GmbH, Munich} & \hfill Jul 2019 - Sept 2019 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{I worked at TNG as a Junior Consultant. During my summer internship there, I implemented a OSS-licensing plugin for the Node Package Manager (npm), which would let you black- and whitelist Open Source Software Licenses for your projects and warn you about conflicting license usage inside of your project and its dependencies.}  \\
+\multicolumn{2}{@{}X@{}}{I worked at TNG as a Junior Consultant. During my summer internship there, I implemented a OSS-licensing plugin for the Node Package Manager (npm), that helped with blacklisting, whitelisting and incompatibility resolution of dependency licenses inside a project. }  \\
 \end{tabularx}
 
 %Projects
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\textbf{flock - Gender Equality in Urban Mobility} & \hfill \href{https://the-flock.org/}{Website} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{A self-organized effort of a group of students that want to propagate a safety feeling on the streets for everyone. We even won \href{https://www.linkedin.com/posts/berliner-sparkasse_preisverleihung-siencestartups-activity-6953668328636755968-uo4t/?utm_source=share\&utm_medium=member_desktop}{a prize!} }  \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -158,11 +153,21 @@ get into the field of Quantum Crypthography. In my free time, I enjoy writing co
 %----------------------------------------------------------------------------------------
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2021 - present & M.Sc. (Computer Science) at \textbf{Humboldt-Universität zu Berlin} \hfill \normalsize (current avg.: 1.45) \\
+2021 - present & M.Sc. (Computer Science) at \textbf{Humboldt-Universität zu Berlin} \hfill \normalsize \\
 
-2017 - 2020 & B.Sc. (Mathematics) at \textbf{Technische Universität München (TUM)}, Thesis: The Dynamics of Vaccine Hesitancy \hfill \\ 
+2017 - 2020 & B.Sc. (Mathematics) at \textbf{Technische Universität München (TUM)}\hfill \\ 
+&\phantom{ }$\rightarrow$ Thesis: \href{https://julienandco.github.io/the-dynamics-of-vaccine-hesitancy/bachelor_thesis_julien_caselmann.pdf}{The Dynamics of Vaccine Hesitancy} (Grade: 1.3) \\
+2017 & Abitur \& Baccalauréat at \textbf{Oskar-von-Miller Gymnasium München} \hfill \\
+&\phantom{ }$\rightarrow$ Valedictorian and Student of the AbiBac Programme
+\end{tabularx}
 
-2017 & Abitur \& Baccalauréat at \textbf{Oskar-von-Miller Gymnasium München}, AbiBac Programme \hfill  (avg.: 1.0) \\
+%----------------------------------------------------------------------------------------
+%	SCHOLARSHIPS
+%----------------------------------------------------------------------------------------
+\section{Scholarships}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2017 &  \normalsize{\textbf{Max-Weber Programme of Bavaria}: member of the Elite Network of Bavaria and the MWP.}\\
+2017 &  \normalsize{\textbf{e-fellows.net}: awarded to the top 10\% of all high school graduates}\\  
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -170,8 +175,12 @@ get into the field of Quantum Crypthography. In my free time, I enjoy writing co
 %----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+Software Development &  \normalsize{\textbf{Flutter} \& \textbf{Dart}: Mobile App Development.}\\
+& \normalsize{\textbf{Python} \& \textbf{R}: Model implementation of my B.Sc.\,Thesis.}\\
+& \normalsize{\textbf{Java} \& \textbf{JavaScript}: Private Projects (Desktop Apps, Websites, Backends)}\\
+Languages &  \normalsize{\textbf{German}, \textbf{French} (mother's tongue), \textbf{English} (C1), \textbf{Spanish} (B2),}\\  
+& \normalsize{\textbf{Russian} (A2+)}\\
+Communication &  \normalsize{Presentation Skills, Communication in difficult sitations }\\  
 \end{tabularx}
 
 \vfill
