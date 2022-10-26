@@ -1,7 +1,7 @@
 # CV Julien Caselmann
 
 - Language: 🏴󠁧󠁢󠁥󠁮󠁧󠁿
-- Template: Professional, no Image
+- Template: Fancy
 
 Check [it][github_page_link] out!
 
@@ -16,8 +16,13 @@ Done!
 
 ## Changing the main CV
 
-- Simply merge the branch of the CV you want to see as the main CV into the ```main``` branch. Make sure you DO NOT overwrite this README and make also sure to rename the main tex file to ```cv.tex```
+- Simply copy all the files needed for the .tex of the CV you want to see as the main CV to compile into the ```cv_latex``` folder in the ```main``` branch. Make sure you DO NOT overwrite this README and make also sure to rename the main tex file to ```cv.tex```
 
 Done!
+
+## Templates
+
+- Fancy [(stolen here)](https://de.overleaf.com/latex/templates/lean-latex-resume/sjbtgfrzjkdw)
+- Pro [(stolen here)](https://github.com/jitinnair1/autoCV)
 
 [github_page_link]: https://julienandco.github.io/lebenslauf/cv.pdf
