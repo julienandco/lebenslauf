@@ -1,189 +1,148 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2021 Jitin Nair
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
-%
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
+\documentclass[
+    % Uncomment the following for more compact font size and spacing
+    % compact
+]{llresume}
 
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
+% Use the following commands to change the document's colors
+\definecolor{accentcolor}{HTML}{8D281E}
+\definecolor{fillcolor}{HTML}{E4EDDE}
+\definecolor{headingcolor}{HTML}{1C6336}
 
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip} 	
-
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
-\usepackage{tabularx}
-
-%for lists within experience section
-\usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
-\usepackage{titlesec}				
-\usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+% Define custom commands, if needed
+\renewcommand{\emph}[1]{{\bfseries\color{accentcolor}#1}}
 
 %Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\hypersetup{colorlinks,breaklinks,urlcolor=accentcolor,linkcolor=accentcolor}
 
-%for social icons
-\usepackage{fontawesome5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal information
+%
+% For contacts and other info, you can use \infoGeneric{<icon>}{<text>}[<link>]
+% to add a line of information, or one of the following shortcuts in the form
+% \info<Shortcut>{<text>}[<link>]:
+%
+% \infoEmail          \infoDate           \infoLinkedin       \infoBook
+% \infoPhone          \infoPlace          \infoGithub         \infoAuthor
+% \infoAddress        \infoLink           \infoInstagram      \infoTools
+% \infoBirthday       \infoHomepage       \infoFlickr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%debug page outer frames
-%\usepackage{showframe}
+% First name, last name, and optional pronouns
+\name{Julien}{Caselmann}[Zylj\~E]
 
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
+% Profile photo
+\photo{photo.jpg}
+
+% Contacts and other info
+\personalinfo{
+    \infoBirthday{28/12/1999 (Bonn, Germany)}
+    \infoAddress{Berlin, Germany}
+    \infoEmail{julien.caselmann@t-online.de}[mailto:julien.caselmann@t-online.de]
+    \infoLinkedin{www.linkedin.com/in/julien-caselmann}[https://www.linkedin.com/in/julien-caselmann-761a2b177/]
+    \infoGithub{github.com/julienandco}[https://github.com/julienandco]
+}
+
+% Tag line
+\tagline{
+    My name is Julien, I \emph{study Computer Science} and nothing bugs me more than doing the same thing twice. This is why I am highly interested in \emph{process automations and abstraction} of workflows. Also, my current academic ambition is to get into the field of \emph{Quantum Crypthography}. In my free time, I enjoy writing comedy scripts and \emph{mobile apps}, playing baseball and I recently picked up playing the guitar.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main pane
+%
+% Each section of the main pane is enclosed within an environment of the form
+% \begin{mainsection}{<section title>} ... \end{mainsection}
+%
+% Available commands:
+%
+% \entryJob{<title>}[<descr>]{<location>}{<date>}
+% \entryPub{<title>}[<descr>]{<authors>}{<journal/conference>}{<DOI/link>}
+% \entrySkills[<title>]{<list of skills>}
+% \entryTags[<title>]{<list of tags>}
+% \entryGeneric{<title>}[<descr>][<info>][<info>][<info>]
+%
+% Skill and tag commands:
+%
+% \skill{<name>}{<score>}
+% \simpleskill[<icon>]{<name>}
+% \boxedtag[<icon>]{<name>}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
-% non-numbered pages
-\pagestyle{empty} 
+\makeheader
 
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
+\begin{mainpane}
+    \begin{mainsection}{Education}
+        \entryJob
+            {M.Sc. Computer Science}
+            [Focused Studies in the areas of Blockchain,\\Machine Learning and Artificial Intelligence]
+            {\href{https://www.informatik.hu-berlin.de/de/studium/Master/Master}{Humboldt-University of Berlin}}
+            {2021 -- present}
+        \entryJob
+            {B.Sc. Mathematics}
+            [Thesis: \href{https://julienandco.github.io/the-dynamics-of-vaccine-hesitancy/bachelor_thesis_julien_caselmann.pdf}{The Dynamics of Vaccine Hesitancy}\\(graded with 1.3)]
+            {\href{https://www.ma.tum.de/}{Technichal University of Munich (TUM)}}
+            {2017 -- 2020}
+        \entryJob
+            {Abitur \& Baccalauréat}
+            [Valedictorian with GPA 1.0 and\\graduate of the AbiBac pogramme]
+            {\href{https://www.ovmg.de/}{Oskar-von-Miller Gymnasium Munich}}
+            {2009 -- 2017}
+    \end{mainsection}
 
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
+    \begin{mainsection}{Projects}
+        \entryGeneric
+            {flock - Gender Equality in Urban Mobility}
+            [We want to establish a feeling of safety for everyone, every time, everywhere.\\We even won \href{https://www.linkedin.com/posts/berliner-sparkasse_preisverleihung-siencestartups-activity-6953668328636755968-uo4t/?utm_source=share\&utm_medium=member_desktop}{a prize} for our effort!]
+            [\infoHomepage
+                {the-flock.org}
+                [https://the-flock.org/]]
+    \end{mainsection}
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Julien Caselmann} \\[7.5pt]
-\href{https://github.com/julienandco}{\raisebox{-0.05\height}\faGithub\ julienandco} \ $|$ \ 
-\href{https://www.linkedin.com/in/julien-caselmann-761a2b177/}{\raisebox{-0.05\height}\faLinkedin\ Julien Caselmann} \ $|$ \ 
-\href{mailto:julien.caselmann@t-online.de}{\raisebox{-0.05\height}\faEnvelope \ julien.caselmann@t-online.de} \ $|$ \ 
-\href{tel:+4915773885900}{\raisebox{-0.05\height}\faMobile \ +49 1577 388 5900} \\
-\end{tabularx}
+    \begin{mainsection}{Work Experience}
+        \entryJob
+            {Flutter Developer}
+            [Implementing a completely automated workflow for the setup of new projects to ensure company-wide quality and less redundant work.]
+            {\href{https://www.neon.dev/}{NEON Software Solutions GmbH, Berlin}}
+            {Jul 2021 -- present}
+        \entryJob
+            {Junior Consultant}
+            [Implemented a OSS-Licensing-Tool for the npm with black- and whitelisting, as well as conflict resolution mechanisms for license clashes.]
+            {\href{https://www.tngtech.com/index.html}{TNG Technology Consulting GmbH, Munich}}
+            {Jul 2019 -- Sept 2019}
+    \end{mainsection}
 
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
+    \begin{mainsection}{Skills \& Languages}
+        \entrySkills[Software Development]{
+            \skill{Flutter}{4}
+            \skill{Dart}{4}
+            \skill{Python}{3}
+            \skill{R}{2}
+            \skill{Java}{3}
+            \skill{JavaScript}{2}
+        }
+        \entrySkills[Soft Skills]{
+            \simpleskill{Presentation (Outstanding Talk Award)}
+            \simpleskill{Communication in difficult situations}
+        }
+        \entrySkills[Languages]{
+            \skill{German}{5}
+            \skill{French}{5}
+            \skill{English}{4}
+            \skill{Spanish}{3}
+            \skill{Russian}{1}
+        }
+    \end{mainsection}
 
-%Interests/ Keywords/ Summary
-\section{Summary}
-My name is Julien, I study Computer Science and nothing bugs me more than doing the same thing twice. This is why I am highly interested in process automations and abstraction of workflows. Also, my current academic ambition is to
-get into the field of Quantum Crypthography. In my free time, I enjoy writing comedy scripts and mobile apps, playing baseball and I recently picked up playing the guitar.
-
-%Experience
-\section{Work Experience}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{NEON Software Solutions GmbH, Berlin} & \hfill Jul 2021 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{I work at NEON as a Flutter Developer. Aside of implementing apps for clients, I dedicate myself to building up a fully automatic app development workflow to ensure product-wide quality, testability, scalability and save our developers a significant amount of time.}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{TNG Technology Consulting GmbH, Munich} & \hfill Jul 2019 - Sept 2019 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{I worked at TNG as a Junior Consultant. During my summer internship there, I implemented a OSS-licensing plugin for the Node Package Manager (npm), that helped with blacklisting, whitelisting and incompatibility resolution of dependency licenses inside a project. }  \\
-\end{tabularx}
-
-%Projects
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{flock - Gender Equality in Urban Mobility} & \hfill \href{https://the-flock.org/}{Website} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{A self-organized effort of a group of students that want to propagate a safety feeling on the streets for everyone. We even won \href{https://www.linkedin.com/posts/berliner-sparkasse_preisverleihung-siencestartups-activity-6953668328636755968-uo4t/?utm_source=share\&utm_medium=member_desktop}{a prize!} }  \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2021 - present & M.Sc. (Computer Science) at \textbf{Humboldt-Universität zu Berlin} \hfill \normalsize \\
-
-2017 - 2020 & B.Sc. (Mathematics) at \textbf{Technische Universität München (TUM)}\hfill \\ 
-&\phantom{ }$\rightarrow$ Thesis: \href{https://julienandco.github.io/the-dynamics-of-vaccine-hesitancy/bachelor_thesis_julien_caselmann.pdf}{The Dynamics of Vaccine Hesitancy} (Grade: 1.3) \\
-2017 & Abitur \& Baccalauréat at \textbf{Oskar-von-Miller Gymnasium München} \hfill \\
-&\phantom{ }$\rightarrow$ Valedictorian and Student of the AbiBac Programme
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	SCHOLARSHIPS
-%----------------------------------------------------------------------------------------
-\section{Scholarships}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-2017 &  \normalsize{\textbf{Max-Weber Programme of Bavaria}: member of the Elite Network of Bavaria and the MWP.}\\
-2017 &  \normalsize{\textbf{e-fellows.net}: awarded to the top 10\% of all high school graduates}\\  
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Software Development &  \normalsize{\textbf{Flutter} \& \textbf{Dart}: Mobile App Development.}\\
-& \normalsize{\textbf{Python} \& \textbf{R}: Model implementation of my B.Sc.\,Thesis.}\\
-& \normalsize{\textbf{Java} \& \textbf{JavaScript}: Private Projects (Desktop Apps, Websites, Backends)}\\
-Languages &  \normalsize{\textbf{German}, \textbf{French} (mother's tongue), \textbf{English} (C1), \textbf{Spanish} (B2),}\\  
-& \normalsize{\textbf{Russian} (A2+)}\\
-Communication &  \normalsize{Presentation Skills, Communication in difficult sitations }\\  
-\end{tabularx}
-
-\vfill
-\center{\footnotesize Last updated: \today}
+    \begin{mainsection}{Personal Interests}
+        \entryTags{
+            \boxedtag{Automated Software Development}
+            \boxedtag{Baseball}
+            \boxedtag{Comedy}
+            \boxedtag{Guitar}
+        }
+    \end{mainsection}
+\end{mainpane}
 
 \end{document}
