@@ -1,0 +1,187 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Julien Caselmann} \\[7.5pt]
+\href{https://github.com/julienandco}{\raisebox{-0.05\height}\faGithub\ julienandco} \ $|$ \ 
+\href{https://www.linkedin.com/in/julien-caselmann-761a2b177/}{\raisebox{-0.05\height}\faLinkedin\ Julien Caselmann} \ $|$ \ 
+\href{mailto:julien.caselmann@t-online.de}{\raisebox{-0.05\height}\faEnvelope \ julien.caselmann@t-online.de} \ 
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Zusammengefasst}
+Mein Name ist Julien, ich \emph{studiere Informatik} und mache Dinge ungern zweimal. Deswegen interessiere ich mich sehr für \emph{Prozessautomatisierungen und Abstraktionen} von Workflows. Außerdem möchte ich \emph{Code für Features und Tests} kontextabhängig \emph{generieren} können, um als Entwickler effizienter zu arbeiten. Meine Freizeit widme ich der Musik, Beachvolleyball und der \emph{\href{https://the-flock.org/}{Sicherheit im öffentlichen Raum}}.
+
+%Experience
+\section{Arbeitserfahrung}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Technical Product Manager, NEON Software Solutions GmbH, Berlin} & \hfill Juni 2023 - heute \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Als Technical Product Manager bin ich für die treibende Kraft hinter der Innovation bei NEON. Ich erstelle Prototypen und Fallstudien für bleeding-edge-Technologien, um deren Integration in unser Entwicklungsportfolio zu testen und baue interne Tools für Automatisierung und Standardisierung.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Flutter Developer, NEON Software Solutions GmbH, Berlin} & \hfill Juli 2021 - Mai 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Als Flutter Developer bei NEON widme ich mich nebem dem täglichen Agenturgeschäft mit Kundenprojekten der vollständigen Automatisierung des Aufsetzens neuer Projekte. So können wir für projekt-übergreifende Qualität garantieren und unseren Entwicklern viel Zeit und repetitive Mühe ersparen.}  \\
+\end{tabularx}
+
+%Projects
+\section{Projekte}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{flock - Gender Equality in Urban Mobility} & \hfill \href{https://the-flock.org/}{\faLink} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Eine selbstorganisierte Gruppe motivierter Studenten, die ein Sicherheitsgefühl auf den Straßen für alle etablieren wollen. Wir haben sogar einen \href{https://www.linkedin.com/posts/berliner-sparkasse_preisverleihung-siencestartups-activity-6953668328636755968-uo4t/?utm_source=share\&utm_medium=member_desktop}{Preis gewonnen!}}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Ausbildung}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2021 - heute & M.Sc. (Informatik) an der \textbf{Humboldt-Universität zu Berlin} \hfill \normalsize \\
+
+2017 - 2020 & B.Sc. (Mathematik) an der \textbf{Technischen Universität München (TUM)}\hfill \\ 
+&\phantom{ }$\rightarrow$ Abschlussarbeit: \href{https://julienandco.github.io/the-dynamics-of-vaccine-hesitancy/bachelor_thesis_julien_caselmann.pdf}{Die Dynamiken der Impfgegnerschaft} (Note: 1,3) \\
+2017 & Abitur \& Baccalauréat am \textbf{Oskar-von-Miller Gymnasium München} \hfill \\
+&\phantom{ }$\rightarrow$ Jahrgangsbester und Absolvent des AbiBac Programms
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SCHOLARSHIPS
+%----------------------------------------------------------------------------------------
+\section{Stipendien}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2017 &  \normalsize{\textbf{Max-Weber Programm Bayern}: Mitglied des Elitenetzwerks Bayern und des MWP.}\\
+2017 &  \normalsize{\textbf{e-fellows.net}: Förderung der besten 10\% eines Abiturjahrgangs}\\  
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Kompetenzen}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Software Entwicklung &  \normalsize{\textbf{Flutter} \& \textbf{Dart}: Mobile App Development und Command-Line-Interfaces}\\
+& \normalsize{\textbf{Python} \& \textbf{R}: Modell und Teststrukturen meiner B.Sc.-Arbeit}\\
+& \normalsize{\textbf{Rust}: Joodle - der Doodle Klon von Julien (wird bald veröffentlicht!)}\\
+Sprachen &  \normalsize{\textbf{Deutsch}, \textbf{Französisch} (Muttersprache), \textbf{Englisch} (C1), \textbf{Spanisch} (B2),}\\  
+& \normalsize{\textbf{Russisch} (A2+)}\\
+Kommunikation &  \normalsize{Präsentieren (Outstanding Talk Award der HU Informatik Gong Show 2022), Kommunikation in schwierigen Situationen (MWP Seminar)}\\  
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Zuletzt aktualisiert: \today}
+
+\end{document}
