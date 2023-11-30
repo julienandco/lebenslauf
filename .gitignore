@@ -1,1 +1,10 @@
-cv_latex/._photo.jpg
+cv_versions/._photo.jpg
+
+# Latex related
+**/*.aux
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.out
+**/*.pdf
+**/*.synctex.gz

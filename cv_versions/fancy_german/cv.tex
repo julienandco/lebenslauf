@@ -1,7 +1,7 @@
 \documentclass[
     % Uncomment the following for more compact font size and spacing
     % compact
-]{llresume}
+]{../llresume}
 
 % Use the following commands to change the document's colors
 \definecolor{accentcolor}{HTML}{8D281E}
@@ -31,12 +31,12 @@
 \name{Julien}{Caselmann}[Zylj\~E]
 
 % Profile photo
-\photo{photo.jpg}
+\photo{../photo.jpg}
 
 % Contacts and other info
 \personalinfo{
-    \infoBirthday{28/12/1999 (Bonn, Germany)}
-    \infoAddress{Berlin, Germany}
+    \infoBirthday{28.12.1999 (Bonn, Deutschland)}
+    \infoAddress{Berlin, Deutschland}
     \infoEmail{julien.caselmann@t-online.de}[mailto:julien.caselmann@t-online.de]
     \infoLinkedin{www.linkedin.com/in/julien-caselmann}[https://www.linkedin.com/in/julien-caselmann-761a2b177/]
     \infoGithub{github.com/julienandco}[https://github.com/julienandco]
@@ -44,7 +44,7 @@
 
 % Tag line
 \tagline{
-    My name is Julien, I \emph{study Computer Science} and nothing bugs me more than doing the same thing twice. This is why I am highly interested in \emph{process automations and abstraction} of workflows. Also, my current academic ambition is to get \emph{neural networks} to learn \emph{data-efficiently}. My free time is all about music, beach volleyball and \emph{\href{https://the-flock.org/}{safety in public spaces}}.
+    \input{../shared/intro_german.tex}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,92 +73,97 @@
 \makeheader
 
 \begin{mainpane}
-    \begin{mainsection}{Education}
+    \begin{mainsection}{Ausbildung}
         \entryJob
-            {M.Sc. Logic, Computation and AI}
-            [Exchange within the ERASMUS+ Programme]
+            {M.Sc. Logik, Berechnung und KI}
+            [Austausch im Rahmen des ERASMUS+ Programms]
             {\href{https://www.informatica.us.es/index.php/masteres/mulcia}{Universidad de Sevilla}}
-            {2022 -- present}
+            {2022 -- 2023}
         \entryJob
-            {M.Sc. Computer Science}
-            [Focused Studies in the areas of Blockchain,\\Machine Learning and Artificial Intelligence]
-            {\href{https://www.informatik.hu-berlin.de/de/studium/Master/Master}{Humboldt-University of Berlin}}
-            {2021 -- present}
+            {M.Sc. Informatik}
+            [Vertiefung in den Bereichen Blockchain,\\Machine Learning und Künstliche Intelligenz]
+            {\href{https://www.informatik.hu-berlin.de/de/studium/Master/Master}{Humboldt-Universität zu Berlin}}
+            {2021 -- heute}
         \entryJob
-            {B.Sc. Mathematics}
-            [Thesis: \href{https://julienandco.github.io/the-dynamics-of-vaccine-hesitancy/bachelor_thesis_julien_caselmann.pdf}{The Dynamics of Vaccine Hesitancy}\\(graded with 1.3)]
-            {\href{https://www.ma.tum.de/}{Technichal University of Munich (TUM)}}
+            {B.Sc. Mathematik}
+            [Abschlussarbeit: \href{https://julienandco.github.io/the-dynamics-of-vaccine-hesitancy/bachelor_thesis_julien_caselmann.pdf}{Die Dynamiken der Impfgegnerschaft} (bewertet mit Note 1,3)]
+            {\href{https://www.ma.tum.de/}{Technische Universität München (TUM)}}
             {2017 -- 2020}
         \entryJob
             {Abitur \& Baccalauréat}
-            [Valedictorian with GPA 1.0 and\\graduate of the AbiBac pogramme]
-            {\href{https://www.ovmg.de/}{Oskar-von-Miller Gymnasium Munich}}
+            [Jahrgangsbester mit Abschlussnote 1,0 und Absolvent des AbiBac-Programms]
+            {\href{https://www.ovmg.de/}{Oskar-von-Miller Gymnasium München}}
             {2009 -- 2017}
     \end{mainsection}
-
-    \begin{mainsection}{Scholarships}
+    
+    \begin{mainsection}{Stipendien}
         \entryGeneric
-            {Max-Weber-Programme of Bavaria (MWP)} 
-            [Member of the Elite Network of Bavaria\\and the MWP]
+            {Max-Weber-Programm Bayern (MWP)} 
+            [Mitglied des Elitenetzwerks Bayern und des MWP]
             [\infoHomepage
                 {elitenetzwerk.bayern.de}
                 [https://www.elitenetzwerk.bayern.de/start/foerderangebote/max-weber-programm]]
         \entryGeneric
             {e-fellows.net} 
-            [Offered to the best 10\% of all high school graduates]
+            [Förderung der besten 10\% eines Abiturjahrgangs]
     \end{mainsection}
-
-    % \begin{mainsection}{Projects}
+    
+    % \begin{mainsection}{Projekte}
     %     \entryGeneric
     %         {flock - Gender Equality in Urban Mobility}
-    %         [A feeling of safety for everyone, everywhere.\\We even won \href{https://www.linkedin.com/posts/berliner-sparkasse_preisverleihung-siencestartups-activity-6953668328636755968-uo4t/?utm_source=share\&utm_medium=member_desktop}{a prize} for our effort!]
+    %         [Sicherheitsgefühl überall, jederzeit und für alle.\\Dafür haben wir sogar einen \href{https://www.linkedin.com/posts/berliner-sparkasse_preisverleihung-siencestartups-activity-6953668328636755968-uo4t/?utm_source=share\&utm_medium=member_desktop}{Preis gewonnen!}]
     %         [\infoHomepage
     %             {the-flock.org}
     %             [https://the-flock.org/]]
     % \end{mainsection}
-
-    \begin{mainsection}{Work Experience}
+    
+    \begin{mainsection}{Arbeitserfahrung}
+        \entryJob
+            {Engineering Manager}
+            [Verantworlicher des gesamten Entwicklungsteams, internen Toolings und Technologie-Strategie.]
+            {\href{https://www.neon.dev/}{NEON Software Solutions GmbH, Berlin}}
+            {Nov 2023 -- heute}
         \entryJob
             {Technical Product Manager}
-            [Internal Innovation Lead, Setup of a standardized Flutter Department, Development of Prototypes and MVPs.]
+            [Interner Innovationsmotor, Aufbau einer standardisierten Flutter-Abteilung, Entwicklung von Prototypen und MVPs.]
             {\href{https://www.neon.dev/}{NEON Software Solutions GmbH, Berlin}}
-            {Jun 2023 -- present}
+            {Juni 2023 -- Oct 23}
         \entryJob
             {Flutter Developer}
-            [Implementing a completely automated workflow for the setup of new projects to ensure company-wide quality and less redundant work.]
+            [Aufbau einer Automatisierungspipeline für projektübergreifende Qualität und weniger redundante Arbeit.]
             {\href{https://www.neon.dev/}{NEON Software Solutions GmbH, Berlin}}
-            {Jul 2021 -- May 2023}
+            {Juli 2021 -- Mai 2023}
     \end{mainsection}
 
-    \begin{mainsection}{Skills \& Languages}
-        \entrySkills[Software Development]{
-             \skill{Dart}{4}
-            \skill{Flutter}{4}
-            \skill{Python}{4}
-            \skill{Java}{3}
-            \skill{R}{2}
-            \skill{JavaScript}{2}
-            \skill{Rust}{1}
-        }
+    \begin{mainsection}{Kompetenzen \& Sprachen}
+        % \entrySkills[Softwareentwicklung]{
+        %     \skill{Dart}{5}
+        %     \skill{Flutter}{5}
+        %     \skill{Python}{4}
+        %     \skill{Java}{3}
+        %     \skill{R}{2}
+        %     \skill{JavaScript}{2}
+        %     \skill{Rust}{1}
+        % }
         \entrySkills[Soft Skills]{
-            \simpleskill{Presentation (Outstanding Talk Award)}
-            \simpleskill{Communication in difficult situations}
+            \simpleskill{Präsentieren}
+            \simpleskill{Kommunikation in schwierigen Situationen}
         }
-        \entrySkills[Languages]{
-            \skill{German}{5}
-            \skill{French}{5}
-            \skill{English}{4}
-            \skill{Spanish}{3}
-            \skill{Russian}{1}
+        \entrySkills[Sprachen]{
+            \skill{Deutsch}{5}
+            \skill{Französisch}{5}
+            \skill{Englisch}{4}
+            \skill{Spanisch}{4}
+            \skill{Russisch}{1}
         }
     \end{mainsection}
 
-    \begin{mainsection}{Personal Interests}
+    \begin{mainsection}{Interessen}
         \entryTags{
-            \boxedtag{Automated Software Development}
+            \boxedtag{Automatisierte Softwareentwicklung}
             \boxedtag{Machine Learning}
             \boxedtag{Flutter}
-            \boxedtag{Music}
+            \boxedtag{Musik}
         }
     \end{mainsection}
 \end{mainpane}
