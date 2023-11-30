@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Edit here with the names of your latex file and directory (can use ".")
-      DIR: ./cv_latex
+      DIR: ./cv_versions
       FILE: cv
     steps:
       - name: Set up Git repository
